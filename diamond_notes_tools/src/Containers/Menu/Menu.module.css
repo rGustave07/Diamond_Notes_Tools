@@ -1,0 +1,16 @@
+.Menu {
+    background-color: #3C4856;
+    width: 25vw;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    color: #9FACBD;
+    font-family: 'Montserrat';
+}
+
+.Menu_Header {
+    text-align: center;
+    font-size: 1.3em;
+    padding-top: 20px;
+    margin: 20px auto;
+}

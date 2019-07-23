@@ -1,23 +1,22 @@
 import React from 'react';
-import classes from './Header.module.css'
+import Billboard from '../../Components/Billboard/Billboard'
 
 class Header extends React.Component {
 
     state = {
-        
+       paths: {
+           home: 'Diamond Medical Notes Tool'
+       } 
     }
 
     render () {
         return (
-            <div className={classes.Header}>
-                <div className={classes.Header_Section}>
-                    <h1 className={classes.Header_Text}>Diamond Medical Notes Tool</h1>
-                    <sub>Developed by: Ritter Gustave</sub>
-                </div>
-            </div>
+            <React.Fragment>
+                <Billboard displayText={this.state.paths.home} />
+            </React.Fragment>
         )
     }
 
 }
 
-export default Header
+export default Header;

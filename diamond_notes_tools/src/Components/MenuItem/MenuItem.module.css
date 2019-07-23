@@ -1,0 +1,21 @@
+.MenuItem {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.Menu_btn {
+    margin-top: 10px;
+    color: #9FACBD;
+    border: none;
+    background-color: #3C4856;
+    padding: 14px 28px;
+    font-size: 1.1em;
+    cursor: pointer;
+    text-align: center;
+}
+
+.Menu_btn:hover {
+    background-color: #9FACBD;
+    color: black;
+}

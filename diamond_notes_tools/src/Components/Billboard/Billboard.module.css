@@ -1,0 +1,22 @@
+.Billboard {
+    background-color: #69B5F8;
+    width: 100%;
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+}
+
+.Billboard_Section {
+    margin: auto;
+    text-align: center;
+}
+
+.Billboard_Text {
+    font-family: 'Montserrat';
+    color: #3C4856;
+    margin: 0 0;
+}
+
+.Billboard_Subtext {
+    font-size: 8pt;
+}
