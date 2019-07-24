@@ -5,6 +5,7 @@ import MenuItem from '../../Components/MenuItem/MenuItem'
 class Menu extends React.Component {
 
     state = {
+        showSideBar: false,
         options: {
             home: {
                 path: '/',
@@ -29,6 +30,15 @@ class Menu extends React.Component {
         }
     }
 
+    showSideBarHandler() {
+        this.setState({showSideBar: !this.state.showSideBar})
+        console.log(this.state.showSideBar);
+    }
+
+    testfunction () {
+        console.log('teststuff')
+    }
+
     render () {
         const navElementsArray = [];
         for (let key in this.state.options) {
@@ -41,10 +51,25 @@ class Menu extends React.Component {
             <MenuItem key={entry.id} displayText={entry.displayText} />
         ))
 
+        const sideBarStatus = this.state.showSideBar
+            ? [ classes.Menu_Full, classes.Menu_Header ] 
+            : [ classes.Menu_Mini ]
+        const sideBar = (
+            <React.Fragment>
+                {this.state.showSideBar
+                    ? <h1 className={sideBarStatus.join(' ')}>Navigation Menu</h1>
+                    : <div className={classes.Hamburger_Menu} onClick={this.testfunction}>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                }
+            </React.Fragment>
+        )
+
         return (
-            <div className={classes.Menu}>
-                <h1 className={classes.Menu_Header}>Navigation Menu</h1>
-                {menuDisplay}
+            <div className={sideBarStatus}>
+                {sideBar}
             </div>
         )
     }
