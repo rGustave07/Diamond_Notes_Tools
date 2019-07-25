@@ -1,5 +1,5 @@
 import React from 'react';
-import Billboard from '../../Components/Billboard/Billboard'
+import Billboard from '../Billboard/Billboard'
 
 class Header extends React.Component {
 

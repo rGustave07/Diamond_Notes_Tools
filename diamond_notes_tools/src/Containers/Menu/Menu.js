@@ -5,7 +5,6 @@ import MenuItem from '../../Components/MenuItem/MenuItem'
 class Menu extends React.Component {
 
     state = {
-        showSideBar: false,
         options: {
             home: {
                 path: '/',
@@ -30,46 +29,26 @@ class Menu extends React.Component {
         }
     }
 
-    showSideBarHandler() {
-        this.setState({showSideBar: !this.state.showSideBar})
-        console.log(this.state.showSideBar);
-    }
-
-    testfunction () {
-        console.log('teststuff')
-    }
-
     render () {
-        const navElementsArray = [];
+        const menuItems = [];
         for (let key in this.state.options) {
-            navElementsArray.push({
-                id: this.state.options[key].id,
-                displayText: this.state.options[key].displayText
-            })
+            menuItems.push({...this.state.options[key]})
         }
-        let menuDisplay = navElementsArray.map(entry => (
-            <MenuItem key={entry.id} displayText={entry.displayText} />
-        ))
-
-        const sideBarStatus = this.state.showSideBar
-            ? [ classes.Menu_Full, classes.Menu_Header ] 
-            : [ classes.Menu_Mini ]
-        const sideBar = (
-            <React.Fragment>
-                {this.state.showSideBar
-                    ? <h1 className={sideBarStatus.join(' ')}>Navigation Menu</h1>
-                    : <div className={classes.Hamburger_Menu} onClick={this.testfunction}>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                }
-            </React.Fragment>
-        )
+        const menuDisplay = menuItems.map( item => {
+            return (
+                <MenuItem displayText={item.displayText} />
+            )
+        })
 
         return (
-            <div className={sideBarStatus}>
-                {sideBar}
+            <div className={classes.Menu}>
+                <div className={classes.Inner_Menu}>
+                    <h1 style={{fontSize: '1.5em'}}>Navigation</h1>
+                    {menuDisplay}
+                </div>
+                <div className={classes.Outer_Menu}>
+                    <div className={classes.Arrow_Right}></div>
+                </div>
             </div>
         )
     }
