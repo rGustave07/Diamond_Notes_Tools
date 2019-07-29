@@ -2,6 +2,8 @@ import React from 'react';
 import classes from './Menu.module.css'
 import MenuItem from '../../Components/MenuItem/MenuItem'
 
+import { NavLink } from 'react-router-dom';
+
 class Menu extends React.Component {
 
     state = {
@@ -12,12 +14,12 @@ class Menu extends React.Component {
                 id: 1
             },
             addPatient: {
-                path: '/add-patient',
+                path: '/Add_Patient',
                 displayText: 'Add Patient',
                 id: 2
             },
             lookupPatient: {
-                path: '/lookup-patient',
+                path: '/Patient_Lookup',
                 displayText: 'Lookup Patient',
                 id: 3
             },
@@ -36,7 +38,9 @@ class Menu extends React.Component {
         }
         const menuDisplay = menuItems.map( item => {
             return (
-                <MenuItem displayText={item.displayText} />
+                <NavLink to={item.path}>
+                    <MenuItem displayText={item.displayText} />
+                </NavLink>
             )
         })
 
@@ -44,7 +48,9 @@ class Menu extends React.Component {
             <div className={classes.Menu}>
                 <div className={classes.Inner_Menu}>
                     <h1 style={{fontSize: '1.5em'}}>Navigation</h1>
-                    {menuDisplay}
+                    <ul className={classes.Menu_List}>
+                        {menuDisplay}
+                    </ul>
                 </div>
                 <div className={classes.Outer_Menu}>
                     <div className={classes.Arrow_Right}></div>

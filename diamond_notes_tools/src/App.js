@@ -1,16 +1,28 @@
 import React from 'react';
+import { Route, Switch, withRouter } from 'react-router-dom';
+
 import Layout from './HOC/Layout/Layout'
 import Home from './Containers/Home/Home'
+import PatientLookup from './Containers/PatientLookup/PatientLookup'
+import AddPatient from './Containers/AddPatient/AddPatient'
 
 import classes from './App.module.css'
 
 class App extends React.Component {
-
-
+	
 	render () {
+		const routes = (
+			<Switch>
+				<Route path="/Add_Patient" exact component={AddPatient} />
+				<Route path="/Patient_Lookup" exact component={PatientLookup}/>
+				<Route path="/" exact component={Home} />
+			</Switch>
+		)
+
 		return (
+			
 			<Layout>
-				<Home />
+				{routes}
 			</Layout>
 		);
 	}

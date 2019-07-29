@@ -12,4 +12,5 @@
     flex-direction: row;
     margin: auto;
     justify-content: center;
+    list-style: none;
 }

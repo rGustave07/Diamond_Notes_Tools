@@ -46,3 +46,7 @@ span {
     width: 25px;
     height: 3px;
 }
+
+.Menu_List {
+    list-style: none;
+}
