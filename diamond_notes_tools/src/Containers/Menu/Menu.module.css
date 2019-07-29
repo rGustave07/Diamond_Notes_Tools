@@ -49,4 +49,23 @@ span {
 
 .Menu_List {
     list-style: none;
+    padding: 0;
+}
+
+.Active_Link {
+    background-color: #9FACBD;
+    color: black;
+}
+
+.MenuItem {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    padding: 5%;
+    text-decoration: none;
+}
+
+li {
+    color: #9FACBD;
+    background: #3C4856;
 }

@@ -38,9 +38,13 @@ class Menu extends React.Component {
         }
         const menuDisplay = menuItems.map( item => {
             return (
-                <NavLink to={item.path}>
-                    <MenuItem displayText={item.displayText} />
-                </NavLink>
+                // <div className={classes.MenuItem}>
+                    <NavLink to={item.path} exact className={classes.MenuItem} activeClassName={classes.Active_Link}>
+                        <li>
+                            {item.displayText}
+                        </li>
+                    </NavLink>
+                // </div>
             )
         })
 
