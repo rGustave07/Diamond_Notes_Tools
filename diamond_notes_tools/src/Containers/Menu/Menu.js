@@ -1,11 +1,13 @@
 import React from 'react';
-import classes from './Menu.module.css'
-import MenuItem from '../../Components/MenuItem/MenuItem'
+import classes from './Menu.module.css';
+import NavButton from '../../Components/UI_Components/NavButton/NavButton';
+import Button from '../../Components/UI_Components/Button/Button';
 
 import { NavLink } from 'react-router-dom';
 
 class Menu extends React.Component {
 
+    // Handle this state in the redux store if you're going to have other components do routing as well
     state = {
         options: {
             home: {
@@ -38,13 +40,7 @@ class Menu extends React.Component {
         }
         const menuDisplay = menuItems.map( item => {
             return (
-                // <div className={classes.MenuItem}>
-                    <NavLink to={item.path} exact className={classes.MenuItem} activeClassName={classes.Active_Link}>
-                        <li>
-                            {item.displayText}
-                        </li>
-                    </NavLink>
-                // </div>
+                <NavButton path={item.path} displayText={item.displayText} />
             )
         })
 

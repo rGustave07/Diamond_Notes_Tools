@@ -3,9 +3,11 @@
     border-radius: 20px;
     color: #9FACBD;
     /* outline: none; */
-    cursor: pointer;
     font: inherit;
-    padding: 30px 50px;
-    margin: 15px 30px;
+    padding: 2.5vh 10vw;
     font-weight: bold;
+}
+
+button:hover {
+    cursor: pointer;
 }

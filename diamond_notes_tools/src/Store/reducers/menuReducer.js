@@ -25,7 +25,7 @@ const initialState = {
         }
     }
 
-const homeReducer = (state = initialState, action) => {
+const menuReducer = (state = initialState, action) => {
     
     switch (action.type) {
         case actionTypes.TEST_ACTION:

@@ -5,10 +5,6 @@ import classes from './Home.module.css'
 
 class Home extends React.Component {
 
-    state = {
-
-    }
-
     render () {
         return (
             <div className={classes.Jumbotron}>
@@ -18,10 +14,10 @@ class Home extends React.Component {
                 <div>
                     <ul className={classes.Btn_Group}>
                         <li>
-                            <Button styleClasses={[]} btnText='Test Text'/>
+                            <Button btnText='Test Text'/>
                         </li>
                         <li>
-                            <Button styleClasses={[]} btnText='Test Text'/>
+                            <Button btnText='Test Text'/>
                         </li>
                     </ul>
                 </div>
