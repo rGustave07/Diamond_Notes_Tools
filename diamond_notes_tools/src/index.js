@@ -4,12 +4,14 @@ import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { createStore, combineReducers } from 'redux';
 import homeReducer from './Store/reducers/homeReducers';
+import menuReducer from './Store/reducers/menuReducer';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
 const rootReducer = combineReducers({
-    homeReducer: homeReducer
+    homeReducer: homeReducer,
+    menuReducer: menuReducer
 })
 
 const store = createStore(rootReducer);

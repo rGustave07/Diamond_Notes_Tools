@@ -1,0 +1,19 @@
+.AddPatient_Panel {
+    margin: 5%;
+    height: 65vh;
+}
+
+.Input_Box {
+    display: flex;
+    flex-direction: column;
+    color: #3C4856;
+    height: 100%;
+    background: #69B5F8;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 13px 10px 15px 10px rgba(0,0,0,0.31);
+}
+
+.Heading {
+    justify-content: center;
+}

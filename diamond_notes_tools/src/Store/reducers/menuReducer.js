@@ -8,12 +8,12 @@ const initialState = {
                 id: 1
             },
             addPatient: {
-                path: '/add-patient',
+                path: '/Add_Patient',
                 displayText: 'Add Patient',
                 id: 2
             },
             lookupPatient: {
-                path: '/lookup-patient',
+                path: '/Patient_Lookup',
                 displayText: 'Lookup Patient',
                 id: 3
             },

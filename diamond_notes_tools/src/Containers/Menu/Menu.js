@@ -2,8 +2,6 @@ import React from 'react';
 import classes from './Menu.module.css';
 import NavButton from '../../Components/UI_Components/NavButton/NavButton';
 
-import { NavLink } from 'react-router-dom';
-
 class Menu extends React.Component {
 
     // Handle this state in the redux store if you're going to have other components do routing as well
@@ -39,7 +37,7 @@ class Menu extends React.Component {
         }
         const menuDisplay = menuItems.map( item => {
             return (
-                <NavButton path={item.path} displayText={item.displayText} />
+                <NavButton key={item.id} path={item.path} displayText={item.displayText} />
             )
         })
 

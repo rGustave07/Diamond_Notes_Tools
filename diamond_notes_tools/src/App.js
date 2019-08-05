@@ -1,12 +1,10 @@
 import React from 'react';
-import { Route, Switch, withRouter } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 
 import Layout from './HOC/Layout/Layout'
 import Home from './Containers/Home/Home'
 import PatientLookup from './Containers/PatientLookup/PatientLookup'
 import AddPatient from './Containers/AddPatient/AddPatient'
-
-import classes from './App.module.css'
 
 class App extends React.Component {
 	
@@ -20,7 +18,6 @@ class App extends React.Component {
 		)
 
 		return (
-			
 			<Layout>
 				{routes}
 			</Layout>

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 
 import classes from './Button.module.css'
 
@@ -8,7 +9,11 @@ const Button = props => {
     // const styles = [...props.styleClasses, classes.Button]
 
     return (
-        <button className={classes.Button}>{props.btnText}</button>
+        <button className={classes.Button}>
+            <Link to={props.pathTo}>
+                {props.btnText}
+            </Link>
+        </button>
     )
 }
 

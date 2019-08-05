@@ -1,9 +1,15 @@
 import React from 'react';
+import { connect } from 'react-redux';
+
 import Button from '../../Components/UI_Components/Button/Button'
 
 import classes from './Home.module.css'
 
 class Home extends React.Component {
+
+    componentDidMount () {
+        console.log(this.props.menu)
+    }
 
     render () {
         return (
@@ -14,10 +20,10 @@ class Home extends React.Component {
                 <div>
                     <ul className={classes.Btn_Group}>
                         <li>
-                            <Button btnText='Test Text'/>
+                            <Button btnText='Add Patient' pathTo={this.props.menu.addPatient.path}/>
                         </li>
                         <li>
-                            <Button btnText='Test Text'/>
+                            <Button btnText='Patient Lookup' pathTo={this.props.menu.lookupPatient.path}/>
                         </li>
                     </ul>
                 </div>
@@ -26,4 +32,10 @@ class Home extends React.Component {
     }
 }
 
-export default Home
+const mapStateToProps = state => {
+    return {
+        menu: state.menuReducer.options
+    }
+}
+
+export default connect(mapStateToProps)(Home);
